@@ -3,6 +3,7 @@ require("dotenv").config();
 const PORT = process.env.PORT || 3000;
 
 var express = require('express');
+var favicon = require('serve-favicon');
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var cookieParser = require("cookie-parser");
@@ -11,6 +12,7 @@ var path = require('path');
 
 var app = express();
 
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cookieParser());
