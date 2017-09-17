@@ -23,7 +23,7 @@ app.use(morgan("dev"));
 // app.use('/api', require('./routes/api'));
 // app.use('/api', require('./routes/sendgrid'));
 app.use('/api', require('./routes/twillo'));
-app.use('/api/search', require('./routes/flightsearch'));
+// app.use('/api/search', require('./routes/flightsearch'));
 
 var server = http.createServer(app);
 
