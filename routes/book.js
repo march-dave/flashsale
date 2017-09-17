@@ -5,13 +5,13 @@ const request = require("request");
 const router = express.Router();
 
 router.post("/", (req, res) => {
-
     var options = {
         method: 'POST',
         url: 'https://api-dev.fareportallabs.com/air/api/book/BookFlightAvailibilty',
         headers: {
-            'postman-token': '18ffa330-754f-5a0f-84df-548af6f13271',
+            'postman-token': '67bea94f-f025-c5a3-2898-d13b709b0012',
             'cache-control': 'no-cache',
+            authorization: 'Basic eXNhbmd5QGdtYWlsLmNvbTpDNjcwMjc0OQ==',
             'content-type': 'application/json'
         },
         body: {
@@ -67,7 +67,6 @@ router.post("/", (req, res) => {
 
         res.send(body);
     });
-
 
 });
 
