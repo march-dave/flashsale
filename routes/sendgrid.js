@@ -6,19 +6,19 @@ var router = require('express').Router();
 
 router.post('/', (req, res) => {
 
-    console.log(req.body.email);
+    // console.log(req.body.email);
 
-    let userEmail = req.body.email;
-    let subject = req.body.subject
-    let message = req.body.message
+    // let userEmail = req.body.email;
+    // let subject = req.body.subject
+    // let message = req.body.message
 
-    let jobAppArr = {};
+    // let jobAppArr = {};
 
-    jobAppArr = {
-        userEmail: req.body.email,
-        subject: req.body.subject,
-        message: req.body.message
-    };
+    // jobAppArr = {
+    //     userEmail: req.body.email,
+    //     subject: req.body.subject,
+    //     message: req.body.message
+    // };
 
     console.log('Test!!!');
 
@@ -47,23 +47,27 @@ router.post('/', (req, res) => {
     var fromEmail = new helper.Email('davedvlee@gmail.com');
     // var toEmail = new helper.Email(userEmail);
 
-    // console.log(toEmail);
+
 
     // var toEmail = new helper.Email('2019892302@tmomail.net');
     var toEmail = new helper.Email('9292253456@vtext.com');
     // var toEmail = new helper.Email(userEmail);
-    // 6764340073@
 
-    // 9292253456@vtext.com
-    // 2019892302@tmomail.net
+
+
     var subject2 = 'Sending with SendGrid is Fun';
 
 
     var content = new helper.Content('text/plain', 'and easy to do anywhere, even with Node.js');
     var mail = new helper.Mail(fromEmail, subject2, toEmail, content);
 
-    // var sg = require('sendgrid')('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');
-    var sg = require('sendgrid')(process.env.SENDGRID_JMS_API_KEY);
+
+
+    var sg = require('sendgrid')('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');
+    // var sg = require('sendgrid')(process.env.SENDGRID_JMS_API_KEY);
+
+    console.log('111111');
+
     var request = sg.emptyRequest({
         method: 'POST',
         path: '/v3/mail/send',

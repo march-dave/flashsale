@@ -1,6 +1,6 @@
 'use strict';
 require("dotenv").config();
-const PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3000;
 
 var express = require('express');
 var favicon = require('serve-favicon');
@@ -12,7 +12,7 @@ var path = require('path');
 
 var app = express();
 
-app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+// app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cookieParser());
@@ -21,8 +21,8 @@ app.use(morgan("dev"));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // app.use('/api', require('./routes/api'));
-app.use('/api', require('./routes/sendgrid'));
-// app.use('/', require('./routes/index'));
+// app.use('/api', require('./routes/sendgrid'));
+app.use('/api', require('./routes/twillo'));
 
 var server = http.createServer(app);
 
