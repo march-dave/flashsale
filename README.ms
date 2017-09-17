@@ -1,1 +1,1 @@
-https://git.heroku.com/fast-garden-45453.git
+https://fast-garden-45453.herokuapp.com
