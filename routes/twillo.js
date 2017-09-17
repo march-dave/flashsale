@@ -19,7 +19,7 @@ router.post("/", (req, res) => {
     // let twilioto = req.body.twilioto;
     // let twiliobody = req.body.twiliobody;
     let twilioto = '+12019892302';
-    let twiliobody = 'Book your Flight NOW NOW NOW! https://warm-plateau-59585.herokuapp.com/#!/';
+    let twiliobody = 'Book your Flight NOW NOW NOW! https://warm-plateau-59585.herokuapp.com/html/book.html';
 
     client.messages.create({
         to: twilioto,
