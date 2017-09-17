@@ -24,6 +24,7 @@ app.use(morgan("dev"));
 // app.use('/api', require('./routes/sendgrid'));
 app.use('/api', require('./routes/twillo'));
 app.use('/api/search', require('./routes/flightsearch'));
+app.use('/api/book', require('./routes/book'));
 
 var server = http.createServer(app);
 
