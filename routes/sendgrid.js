@@ -49,7 +49,8 @@ router.post('/', (req, res) => {
 
     // console.log(toEmail);
 
-    var toEmail = new helper.Email('2019892302@tmomail.net');
+    // var toEmail = new helper.Email('2019892302@tmomail.net');
+    var toEmail = new helper.Email('9292253456@vtext.com');
     // var toEmail = new helper.Email(userEmail);
     // 6764340073@
 
