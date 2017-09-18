@@ -63,8 +63,8 @@ router.post('/', (req, res) => {
 
 
 
-    var sg = require('sendgrid')('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');
-    // var sg = require('sendgrid')(process.env.SENDGRID_JMS_API_KEY);
+    var sg = require('sendgrid')
+    var sg = require('sendgrid')(process.env.SENDGRID_JMS_API_KEY);
 
     console.log('111111');
 
